@@ -35,7 +35,7 @@ This guide will walk you through setting up your Project Live Tracker + Timeshee
 
 #### Update `README.md`:
 ```markdown
-**[View Live Application](https://YOUR_ACTUAL_USERNAME.github.io/project-live-tracker-timesheet)**
+**[View Live Application](https://surajikf.github.io/Project-Live-Tracker---Timesheet/)**
 ```
 
 ### 3. Connect Local Repository to GitHub

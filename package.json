@@ -2,7 +2,7 @@
   "name": "project-live-tracker-timesheet",
   "version": "1.0.0",
   "description": "Real-time project tracking and timesheet management application",
-  "homepage": "https://yourusername.github.io/project-live-tracker-timesheet",
+  "homepage": "https://surajikf.github.io/Project-Live-Tracker---Timesheet",
   "private": false,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
