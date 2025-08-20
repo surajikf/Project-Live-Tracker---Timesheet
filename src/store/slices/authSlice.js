@@ -8,6 +8,13 @@ export const loginUser = createAsyncThunk(
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
+      // For demo - accept any password for demo emails
+      const validEmails = ['admin@company.com', 'team@company.com', 'client@company.com'];
+      
+      if (!validEmails.includes(credentials.email) && credentials.password !== 'demo123') {
+        return rejectWithValue('Invalid credentials');
+      }
+      
       // Mock user data based on role
       const mockUsers = {
         admin: {

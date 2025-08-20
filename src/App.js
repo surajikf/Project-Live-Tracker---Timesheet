@@ -17,10 +17,13 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 
 function App() {
   const dispatch = useDispatch();
-  const { isAuthenticated } = useSelector(state => state.auth);
+  const { isAuthenticated, user } = useSelector(state => state.auth);
+
+  console.log('App render - isAuthenticated:', isAuthenticated, 'user:', user);
 
   useEffect(() => {
     if (isAuthenticated) {
+      console.log('User authenticated, fetching data...');
       dispatch(fetchProjects());
       dispatch(fetchUsers());
       dispatch(fetchTimesheets());
@@ -28,8 +31,11 @@ function App() {
   }, [dispatch, isAuthenticated]);
 
   if (!isAuthenticated) {
+    console.log('Not authenticated, showing Login');
     return <Login />;
   }
+
+  console.log('Authenticated, showing dashboard');
 
   return (
     <div className="App">
@@ -38,11 +44,7 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route 
             path="/dashboard" 
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } 
+            element={<Dashboard />} 
           />
           <Route 
             path="/projects" 

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../store/slices/authSlice';
 import { User, Lock, Eye, EyeOff } from 'lucide-react';
 
@@ -11,7 +12,19 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector(state => state.auth);
+  const navigate = useNavigate();
+  const { isLoading, error, isAuthenticated } = useSelector(state => state.auth);
+
+  // Redirect to dashboard when authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      console.log('Login successful, redirecting to dashboard...');
+      // Force redirect using window.location for GitHub Pages
+      setTimeout(() => {
+        window.location.href = window.location.origin + window.location.pathname + '#/dashboard';
+      }, 1000);
+    }
+  }, [isAuthenticated]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -64,7 +77,6 @@ const Login = () => {
                   id="email"
                   name="email"
                   type="email"
-                  required
                   value={credentials.email}
                   onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
                   className="input-field pl-10"
@@ -83,7 +95,6 @@ const Login = () => {
                   id="password"
                   name="password"
                   type={showPassword ? 'text' : 'password'}
-                  required
                   value={credentials.password}
                   onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
                   className="input-field pr-10"
@@ -119,6 +130,31 @@ const Login = () => {
                 </>
               )}
             </button>
+
+            {/* Quick Demo Login */}
+            <div className="mt-4">
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('admin')}
+                className="btn-primary w-full mb-2"
+              >
+                Quick Demo: Admin Login
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('team')}
+                className="btn-secondary w-full mb-2"
+              >
+                Quick Demo: Team Login
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('client')}
+                className="btn-warning w-full"
+              >
+                Quick Demo: Client Login
+              </button>
+            </div>
           </form>
 
           {/* Demo Login Buttons */}

@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children, requiredRole = null }) => {
   const { isAuthenticated, user } = useSelector(state => state.auth);
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   // If a specific role is required, check if user has it
