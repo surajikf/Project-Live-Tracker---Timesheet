@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css",
-    "main.js": "/Project-Live-Tracker---Timesheet/static/js/main.8f59b800.js",
+    "main.js": "/Project-Live-Tracker---Timesheet/static/js/main.1b92e4c8.js",
     "index.html": "/Project-Live-Tracker---Timesheet/index.html",
     "main.7088cc95.css.map": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css.map",
-    "main.8f59b800.js.map": "/Project-Live-Tracker---Timesheet/static/js/main.8f59b800.js.map"
+    "main.1b92e4c8.js.map": "/Project-Live-Tracker---Timesheet/static/js/main.1b92e4c8.js.map"
   },
   "entrypoints": [
     "static/css/main.7088cc95.css",
-    "static/js/main.8f59b800.js"
+    "static/js/main.1b92e4c8.js"
   ]
 }
