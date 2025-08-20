@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css",
-    "main.js": "/Project-Live-Tracker---Timesheet/static/js/main.d22c3e2e.js",
+    "main.css": "/Project-Live-Tracker---Timesheet/static/css/main.39917001.css",
+    "main.js": "/Project-Live-Tracker---Timesheet/static/js/main.a311e55b.js",
     "index.html": "/Project-Live-Tracker---Timesheet/index.html",
-    "main.7088cc95.css.map": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css.map",
-    "main.d22c3e2e.js.map": "/Project-Live-Tracker---Timesheet/static/js/main.d22c3e2e.js.map"
+    "main.39917001.css.map": "/Project-Live-Tracker---Timesheet/static/css/main.39917001.css.map",
+    "main.a311e55b.js.map": "/Project-Live-Tracker---Timesheet/static/js/main.a311e55b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7088cc95.css",
-    "static/js/main.d22c3e2e.js"
+    "static/css/main.39917001.css",
+    "static/js/main.a311e55b.js"
   ]
 }
