@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css",
+    "main.js": "/Project-Live-Tracker---Timesheet/static/js/main.80283398.js",
+    "index.html": "/Project-Live-Tracker---Timesheet/index.html",
+    "main.7088cc95.css.map": "/Project-Live-Tracker---Timesheet/static/css/main.7088cc95.css.map",
+    "main.80283398.js.map": "/Project-Live-Tracker---Timesheet/static/js/main.80283398.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7088cc95.css",
+    "static/js/main.80283398.js"
+  ]
+}
